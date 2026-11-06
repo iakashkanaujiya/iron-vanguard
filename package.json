@@ -1,0 +1,29 @@
+{
+  "name": "iron-vanguard",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Iron Vanguard - an original retro run-and-gun action game built with TypeScript and HTML5 Canvas",
+  "author": "Akash Kanaujiya",
+  "homepage": "https://iakashkanaujiya.github.io/iron-vanguard/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iakashkanaujiya/iron-vanguard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iakashkanaujiya/iron-vanguard/issues"
+  },
+  "keywords": [
+    "game", "run-and-gun", "platformer", "typescript", "html5-canvas", "pixel-art", "chiptune", "web-audio", "vite"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.3.6"
+  }
+}

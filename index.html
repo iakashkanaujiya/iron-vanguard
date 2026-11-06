@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#000000" />
+    <title>Iron Vanguard</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+      body {
+        display: flex; align-items: center; justify-content: center;
+        touch-action: none; user-select: none; -webkit-user-select: none;
+      }
+      canvas {
+        display: block; background: #000;
+        image-rendering: pixelated; image-rendering: crisp-edges;
+      }
+      #touch { position: fixed; inset: 0; pointer-events: none; font: bold 13px system-ui, sans-serif; }
+      #touch[hidden] { display: none; }
+      #stick, .btn, #bPause { pointer-events: auto; position: absolute; touch-action: none; }
+      #stick {
+        left: 24px; bottom: 24px; width: 136px; height: 136px; border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08); border: 2px solid rgba(255, 255, 255, 0.25);
+      }
+      #knob {
+        position: absolute; left: 50%; top: 50%; width: 52px; height: 52px; margin: -26px 0 0 -26px;
+        border-radius: 50%; background: rgba(255, 255, 255, 0.3);
+      }
+      .btn {
+        width: 74px; height: 74px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        color: rgba(255, 255, 255, 0.85); border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+      .btn.on { filter: brightness(1.6); }
+      #bJump { right: 112px; bottom: 28px; background: rgba(61, 125, 202, 0.4); }
+      #bFire { right: 24px; bottom: 92px; background: rgba(232, 66, 63, 0.4); }
+      #bPause {
+        top: 10px; left: 50%; transform: translateX(-50%); padding: 6px 14px; border-radius: 8px;
+        color: #fff; background: rgba(255, 255, 255, 0.15);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="game" width="384" height="216" aria-label="Iron Vanguard game screen"></canvas>
+    <div id="touch" hidden>
+      <div id="stick"><div id="knob"></div></div>
+      <div class="btn" id="bJump">JUMP</div>
+      <div class="btn" id="bFire">FIRE</div>
+      <div id="bPause">II</div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
